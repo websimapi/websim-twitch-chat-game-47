@@ -180,6 +180,7 @@ export async function exportWorldData(channel, worldName, useVerbose) {
         data: {
             players: finalPlayers,
             map: worldState.map,
+            assets: worldState.assets || {} // include asset overrides in export
         },
         format: useVerbose ? 'verbose' : 'compact',
     };

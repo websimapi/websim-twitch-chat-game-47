@@ -54,7 +54,8 @@ async function saveImportedWorld(channel, worldName, data, dataFormat) {
     const worldKey = `${channel}/${worldName}`;
     const worldState = {
         players: playersToSave,
-        map: data.map || {}
+        map: data.map || {},
+        assets: data.assets || {} // restore asset overrides on import if present
     };
 
     try {
